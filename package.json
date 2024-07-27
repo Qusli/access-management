@@ -1,0 +1,26 @@
+{
+  "name": "saa-soft-test",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/uuid": "^10.0.0",
+    "path": "^0.12.7",
+    "pinia": "^2.1.7",
+    "uuid": "^10.0.0",
+    "vite-svg-loader": "^5.1.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "sass": "^1.77.8",
+    "typescript": "^5.0.0",
+    "vite": "^4.4.5",
+    "vue-tsc": "^2.0.0"
+  }
+}

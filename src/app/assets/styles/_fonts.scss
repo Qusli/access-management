@@ -1,0 +1,37 @@
+/* NOT ITALIC */
+@font-face {
+    font-family: "PTSans";
+    font-weight: 400;
+    src: local("PTSans Regular"),
+    local("PTSans-Regular"),
+    url("@/app/assets/fonts/PTSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PTSans";
+    font-weight: 700;
+    src: local("PTSans Bold"),
+    local("PTSans-Bold"),
+    url("@/app/assets/fonts/PTSans-Bold.ttf") format("truetype");
+}
+/* END NOT ITALIC */
+
+/* ITALIC */
+@font-face {
+    font-family: "PTSans";
+    font-style: italic;
+    font-weight: 400;
+    src: local("PTSans Italic"),
+    local("PTSans-Italic"),
+    url("@/app/assets/fonts/PTSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PTSans";
+    font-style: italic;
+    font-weight: 700;
+    src: local("PTSans BoldItalic"),
+    local("PTSans-BoldItalic"),
+    url("@/app/assets/fonts/PTSans-BoldItalic.ttf") format("truetype");
+}
+/* END ITALIC */
