@@ -42,51 +42,51 @@ watch(record, (v) => {
 </script>
 
 <template>
-    <tr class="record">
-      <td class="record-mark">
-        <Textarea
-          v-model="marks"
-          :is-error="!appStore.validateMarks(record)"
-          error-message="Длина не может больше 50 символов и поле не может быть пустым"
-          @focusout="appStore.saveRecords"
-        />
-      </td>
-      <td class="record-type">
-        <Select
-          :items="RECORD_TYPE"
-          v-model="record.recordType"
-          @update:model-value="appStore.saveRecords"
-        />
-      </td>
-      <td class="record-login">
-        <Input
-          type="text"
-          v-model="record.login"
-          class="record-login__input"
-          :is-error="!appStore.validateLogin(record)"
-          error-message="Длина не может больше 100 символов и поле не может быть пустым"
-          @focusout="appStore.saveRecords"
-        />
-      </td>
-      <td class="record-password">
-        <Input
-          v-if="record.recordType === RecordType.LOCAL"
-          type="password"
-          v-model="record.password"
-          :is-password="true"
-          :is-error="!appStore.validatePassword(record)"
-          error-message="Длина не может больше 100 символов и поле не может быть пустым"
-          class="record-password__input"
-          @focusout="appStore.saveRecords"
-        />
-      </td>
-      <td>
-        <TrashIcon
-          @click="appStore.removeRecord(record.id)"
-          class="record__trash-icon"
-        />
-      </td>
-    </tr>
+  <tr class="record">
+    <td class="record-mark">
+      <Textarea
+        v-model="marks"
+        :is-error="!appStore.validateMarks(record)"
+        error-message="Длина не может больше 50 символов"
+        @focusout="appStore.saveRecords"
+      />
+    </td>
+    <td class="record-type">
+      <Select
+        :items="RECORD_TYPE"
+        v-model="record.recordType"
+        @update:model-value="appStore.saveRecords"
+      />
+    </td>
+    <td class="record-login">
+      <Input
+        type="text"
+        v-model="record.login"
+        class="record-login__input"
+        :is-error="!appStore.validateLogin(record)"
+        error-message="Длина не может больше 100 символов и поле не может быть пустым"
+        @focusout="appStore.saveRecords"
+      />
+    </td>
+    <td class="record-password">
+      <Input
+        v-if="record.recordType === RecordType.LOCAL"
+        type="password"
+        v-model="record.password"
+        :is-password="true"
+        :is-error="!appStore.validatePassword(record)"
+        error-message="Длина не может больше 100 символов и поле не может быть пустым"
+        class="record-password__input"
+        @focusout="appStore.saveRecords"
+      />
+    </td>
+    <td>
+      <TrashIcon
+        @click="appStore.removeRecord(record.id)"
+        class="record__trash-icon"
+      />
+    </td>
+  </tr>
 </template>
 
 <style scoped lang="scss">

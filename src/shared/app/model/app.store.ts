@@ -68,6 +68,7 @@ export const useAppStore = defineStore({
 
     /** Валидация меток */
     validateMarks(record: RecordItem): boolean {
+      if (!record.marks.length) return true;
       return record.marks.some((el) => {
         if (el.text.length > 50) {
           return false;
